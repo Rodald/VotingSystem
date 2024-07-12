@@ -1,0 +1,4 @@
+name: VotingSystem
+version: '${project.version}'
+main: net.rodald.votingsystem.VotingSystem
+api-version: '1.20'
