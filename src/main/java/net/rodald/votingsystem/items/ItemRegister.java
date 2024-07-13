@@ -1,7 +1,7 @@
 package net.rodald.votingsystem.items;
 
+import net.rodald.votingsystem.items.powerups.*;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.*;
@@ -13,6 +13,12 @@ public class ItemRegister {
     public ItemRegister() {
         ExtraVote.initItem();
         YeetStick.initItem();
+        CatStealer.initItem();
+        Reset.initItem();
+        Knife.initItem();
+        Molotov.initItem();
+
+
     }
 
     public static ItemStack getRandomItem() {
