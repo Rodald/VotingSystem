@@ -17,8 +17,10 @@ public class ItemRegister {
         Reset.initItem();
         Knife.initItem();
         Molotov.initItem();
-
-
+        BigBoy.initItem();
+        Creeper.initItem();
+        FatMan.initItem();
+        YeetStick.initItem();
     }
 
     public static ItemStack getRandomItem() {
