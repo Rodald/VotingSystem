@@ -30,4 +30,10 @@ public class ItemRegister {
 
         return availableItems.get(randomNumber);
     }
+
+    public static giveAllItems(Player player) {
+        for  (ItemStack item : availableItems) {
+            player.getInventory().addItem(item);
+        }
+    }
 }
