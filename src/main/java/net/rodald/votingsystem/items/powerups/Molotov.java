@@ -18,8 +18,8 @@ import java.util.Set;
 
 public class Molotov implements Listener {
     private static ItemStack item = new ItemStack(Material.FIRE_CHARGE);
-    private static final String itemName = "Molotov";
-    private static final ArrayList<String> itemLore = new ArrayList<>(
+    private static final String ITEM_NAME = "Molotov";
+    private static final ArrayList<String> ITEM_LORE = new ArrayList<>(
             Arrays.asList(ChatColor.RESET + "Right click a mini-game", ChatColor.RESET + "to set it on fire"));
 
     private static final Set<Material> CONCRETE_BLOCKS = EnumSet.of(
@@ -38,8 +38,8 @@ public class Molotov implements Listener {
     }
     public static void initItem() {
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(ChatColor.RESET + itemName);
-        meta.setLore(itemLore);
+        meta.setDisplayName(ChatColor.RESET + ITEM_NAME);
+        meta.setLore(ITEM_LORE);
         item.setItemMeta(meta);
         ItemRegister.availableItems.add(item);
     }
@@ -57,13 +57,11 @@ public class Molotov implements Listener {
             Player player = event.getPlayer();
             World world = player.getWorld();
 
-            // Check if the item is the Molotov
             if (item != null && item.isSimilar(Molotov.getItem())) {
-                // Check if the block clicked is concrete
+                // Check if the block clicked is valid concrete
                 Material clickedBlock = event.getClickedBlock().getType();
                 Location location = event.getClickedBlock().getLocation();
                 if (!isConcrete(clickedBlock)) {
-                    // Cancel the event if the block is not concrete
                     event.setCancelled(true);
                     event.getPlayer().sendMessage(ChatColor.RED + "You can only place the Molotov on concrete blocks!");
                     return;

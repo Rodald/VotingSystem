@@ -26,7 +26,7 @@ public class Knife {
         meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, modifier);
 
         item.setItemMeta(meta);
-        item.setDurability((short) 0);
+        item.setDurability((short) 131);
         ItemRegister.availableItems.add(item);
     }
 

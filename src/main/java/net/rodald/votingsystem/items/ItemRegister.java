@@ -17,10 +17,8 @@ public class ItemRegister {
         Reset.initItem();
         Knife.initItem();
         Molotov.initItem();
-        BigBoy.initItem();
-        Creeper.initItem();
-        FatMan.initItem();
-        YeetStick.initItem();
+
+
     }
 
     public static ItemStack getRandomItem() {
@@ -29,11 +27,5 @@ public class ItemRegister {
         Bukkit.broadcastMessage(String.valueOf(randomNumber));
 
         return availableItems.get(randomNumber);
-    }
-
-    public static giveAllItems(Player player) {
-        for  (ItemStack item : availableItems) {
-            player.getInventory().addItem(item);
-        }
     }
 }
